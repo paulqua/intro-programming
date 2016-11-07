@@ -1,0 +1,39 @@
+body {
+	background-color:black;
+}
+
+h1 {
+	font-family:Arial, Helvetica, sans-serif;
+	color:white;
+}
+
+h2 {
+	font-family:Arial, Helvetica, sans-serif;
+	color:white;
+}
+
+.lesson {
+	background-color:#7D7877;
+	border-radius:2%;
+}
+
+.subject-block {
+	background-color:#D6D0CF;
+	border-radius:2%;
+}
+
+.subject-title {
+	color:#7E615B;
+}
+
+.subject-content {
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.left-list {
+
+}
+
+.right-list {
+	
+}
