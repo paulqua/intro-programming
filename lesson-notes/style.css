@@ -41,9 +41,13 @@ h2 {
 }
 
 .left-list {
-	
+	width:50%;
 }
 
 .right-list {
-	
+	width:50%;
+}
+
+#display {
+	display:flex;
 }
