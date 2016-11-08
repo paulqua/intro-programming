@@ -19,14 +19,14 @@ h2 {
 .lesson {
 	background-color:#7D7877;
 	border-radius:5px;
-	margin:5px 5px 5px 5px;
+	margin:5px;
 	padding:10px;
 }
 
 .subject-block {
 	background-color:#D6D0CF;
 	border-radius:5px;
-	margin:10px 10px 10px 10px;
+	margin:10px;
 	padding:10px;
 }
 
@@ -39,7 +39,7 @@ h2 {
 
 .subject-content {
 	font-family:Arial, Helvetica, sans-serif;
-	padding: 5px 5px 5px 5px;
+	padding: 5px;
 }
 
 .left-list {
