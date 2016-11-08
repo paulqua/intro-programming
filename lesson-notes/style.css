@@ -26,10 +26,12 @@ h2 {
 #snoopy {
 	width:74px;
 	height:88px;
+	margin-left:5px;
 }
 
 #pic {
 	display:flex;
+	margin-top:5px;
 }
 
 .subject-block {
