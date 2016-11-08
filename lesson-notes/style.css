@@ -16,6 +16,7 @@ h2 {
 	margin:20px;
 }
 
+
 .lesson {
 	background-color:#7D7877;
 	border-radius:5px;
@@ -48,6 +49,10 @@ h2 {
 
 .right-list {
 	width:50%;
+}
+
+ul {
+	list-style-image: url('images/plane.png');
 }
 
 #display {
