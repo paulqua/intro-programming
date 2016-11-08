@@ -16,13 +16,13 @@ h2 {
 
 .lesson {
 	background-color:#7D7877;
-	border-radius:2%;
+	border-radius:5px;
 	margin:5px 5px 5px 5px;
 }
 
 .subject-block {
 	background-color:#D6D0CF;
-	border-radius:2%;
+	border-radius:5px;
 	margin:10px 10px 10px 10px;
 }
 
