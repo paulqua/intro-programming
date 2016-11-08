@@ -27,7 +27,10 @@ h2 {
 }
 
 .subject-title {
-	color:#7E615B;
+	color:#892F1D;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5em;
 }
 
 .subject-content {
