@@ -11,19 +11,21 @@ h1 {
 h2 {
 	font-family:Arial, Helvetica, sans-serif;
 	color:white;
-	margin-left:20px;
+	margin:20px;
 }
 
 .lesson {
 	background-color:#7D7877;
 	border-radius:5px;
 	margin:5px 5px 5px 5px;
+	padding:10px;
 }
 
 .subject-block {
 	background-color:#D6D0CF;
 	border-radius:5px;
 	margin:10px 10px 10px 10px;
+	padding:10px;
 }
 
 .subject-title {
