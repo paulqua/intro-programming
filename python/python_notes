@@ -1,0 +1,14 @@
+Functions:
+To define a function use def then the function name and then () with a reference name inside:
+def example_function(name):
+To call the function, use the function name, then () and you can place a value inside the quotes for the reference name to reference inside of the function.
+
+If Statements:
+An if statement is placed inside of a function and is used to execute code if the if statement is true. If the code inside the if statement is true then it goes to the next line, which is indented. You shoud also include an else statement at below the if statement, at the same indention that gets executed if the if statment is false.
+
+Strings:
+Strings are words to be printed out as words. They are indicated by "" or single ''. Example: 'Boby is so gay!' Strings immutable, meaning they cannot be mutated like lists can. You can reference any character in a string with the []. The first character in a string starts with 0.
+
+Lists are represented by []. They can contain any character, number or string. They can even contain other lists and lists of lists. You can reference an item in the list the same way you would in a string, except it will return the full value of that item, not just a single character. Example list = [1,2,3,'Silly'] list[3] would be 'silly'. You can mutate the list, which means it will change the list, instead of create a new one. 
+
+Append Vs. + . Append will actaully add to a list spy = [0,1,2]  spy.append(9,5)  Mutates the spy list to spy =[0,1,2,9,5]. The + operator creates a new list. Example: list_1 = [0,1]  list_2 = [3,4]  list_3 = list_1 + list_2  list_3 = [0,1,3,4]. Note that now there is a new list, because the + operator does not mutate the current lists, so list_1 still equals [0,1] and list_2 = [3,4].
