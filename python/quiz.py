@@ -39,10 +39,13 @@ def quiz(level, choices, count): #function acts as a while loop with filler func
 def chooseLevel(level): #function lets user choose a level of easy, medium or hard
 	count = 0
 	if level == 'easy':
+		print 'YOU HAVE CHOSEN EASY!'
 		return quiz(easy, easyChoice, count)
 	if level == 'medium':
+		print 'YOU HAVE CHOSEN EASY!'
 		return quiz(medium, mediumChoice, count)
 	if level == 'hard':
+		print 'YOU HAVE CHOSEN EASY!'
 		return quiz(hard, hardChoice, count)
 	else:
 		print 'Please enter a valid choice of: easy, medium or hard. Please use all lowercase.'
