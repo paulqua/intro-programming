@@ -25,6 +25,7 @@ missingWords = ['___1___', '___2___', '___3___', '___4___']
 #printed at the end of the quiz
 finish ='YOU HAVE COMPLTED THE QUIZ! CONGRATULATIONS!'
 
+errorCount = []
 
 
 def quiz(level, choices, count): #function acts as a while loop with filler function. Both
@@ -50,6 +51,14 @@ def chooseLevel(level): #function lets user choose a level of easy, medium or ha
 	else:
 		print 'Please enter a valid choice of: easy, medium or hard. Please use all lowercase.'
 
+def error(count):
+	ecount = 0
+	errorCount.append(count)
+	for i in errorCount:
+		if i == count:
+			ecount +=1
+	return ecount
+
 def filler(answer, count, update, choices): #updates the selected paragraph with the correct answers
 	finalList = []
 	if answer == choices[count]:
@@ -65,7 +74,15 @@ def filler(answer, count, update, choices): #updates the selected paragraph with
 		quiz(update, choices, count)
 	else:
 		print 'YOUR ANSWER WAS INCORRECT, PLEASE TRY AGAIN.'
-		quiz(update, choices, count)
+		error_count = error(count)
+		if error_count < 5:
+			print 'YOU HAVE', 5 - error_count, 'TRIES LEFT.'
+			quiz(update, choices, count)
+		else:
+			print 'You have used up all your chances. Game Over!'
+
+
+
 
 	
 
