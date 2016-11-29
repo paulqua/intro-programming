@@ -56,8 +56,8 @@ def chooseLevel(level):
 def error(count): 
 	ecount = 0
 	errorCount.append(count)
-	for i in errorCount:
-		if i == count:
+	for index in errorCount:
+		if index == count:
 			ecount +=1
 	return ecount
 
