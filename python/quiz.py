@@ -28,6 +28,9 @@ finish ='YOU HAVE COMPLTED THE QUIZ! CONGRATULATIONS!'
 #used to keep track of how many times user has tried a specific question
 errorCount = []
 
+#used in the filler function else statement for max amount of tries per question
+maxTries = 5
+
 #function asks the questions from user, then passes info to filler function, then receives it back again just like a while loop
 def quiz(level, choices, count): 
 	print level
@@ -78,8 +81,8 @@ def filler(answer, count, update, choices):
 	else:
 		print 'YOUR ANSWER WAS INCORRECT, PLEASE TRY AGAIN.'
 		error_count = error(count)
-		if error_count < 5:
-			print 'YOU HAVE', 5 - error_count, 'TRIES LEFT.'
+		if error_count < maxTries:
+			print 'YOU HAVE', maxTries - error_count, 'TRIES LEFT.'
 			quiz(update, choices, count)
 		else:
 			print 'You have used up all your chances. Game Over!'
