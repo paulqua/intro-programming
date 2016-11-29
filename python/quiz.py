@@ -31,7 +31,7 @@ errorCount = []
 #used in the filler function else statement for max amount of tries per question
 maxTries = 5
 
-#function asks the questions from user, then passes info to filler function, then receives it back again just like a while loop
+#Function is invoked by the chooseLevel() and receives level that the client has selected, which choices are associated with the level and count. Then asks client raw_input for what the correct answer is and passes info to filler(). Then receives back the updated count variable to tell whether the input answer was correct or not. It repeats until the count < len(missingWords).
 def quiz(level, choices, count): 
 	print level
 	if count < len(missingWords):
@@ -40,7 +40,7 @@ def quiz(level, choices, count):
 	else:	
 		print finish
 	
-#function lets user choose a level of easy, medium or hard
+#Function receives raw_input from start when chooseLevel() is invoked. Then determines what level the user selected and passes that in when it invokes quiz(). This function is only used once, just to determine level selected.
 def chooseLevel(level): 
 	count = 0
 	if level == 'easy':
@@ -55,7 +55,7 @@ def chooseLevel(level):
 	else:
 		print 'Please enter a valid choice of: easy, medium or hard. Please use all lowercase.'
 
-#counts how many times the user has tried to answer the question and got it wrong
+#Function is invoked by the else statement in filler() if the users input answer was not correct. This function receives the current value of the count variable and checks to see how many times the user has missed a particular question. It returns the ecount variable back to the else in filler(). The ecount variable counts how many times the user has failed a particular question.
 def error(count): 
 	ecount = 0
 	errorCount.append(count)
@@ -64,7 +64,7 @@ def error(count):
 			ecount +=1
 	return ecount
 
-#updates the selected paragraph with the correct answers if correct. Else, prints out incorrect statement and counts down tries
+#Function is invoked by quiz() if statement. It receives the input answer from user, the current count, level selected, and choices for that answer. This function then checks to see if the users input answer matches the correct choice from choices using the current count. If the answer is correct, count increases by one and it is sent back to quiz() for the user to select the next answer. It also turns the level paragraph into a list using update.split() then .appends the correct answer to a new list called finalList. Then after all words are appended to list, it joins back the list into a string. This function also has an else statement that determines if the answer was incorrect and sends the current count to error() to determine how many times the user has missed a particular question. Then receives back ecount variable amount and displays to user how many tries they have left.
 def filler(answer, count, update, choices): 
 	finalList = []
 	if answer == choices[count]:
@@ -87,7 +87,7 @@ def filler(answer, count, update, choices):
 		else:
 			print 'You have used up all your chances. Game Over!'
 
-
+#First function to be invoked passes in the user input for their determined level.
 userInput = raw_input('What level do you want? easy, medium or hard:' ' ')
 chooseLevel(userInput)
 
