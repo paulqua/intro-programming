@@ -46,10 +46,10 @@ def chooseLevel(level):
 	if level == 'easy':
 		print 'YOU HAVE CHOSEN EASY!'
 		return quiz(easy, easyChoice, count)
-	if level == 'medium':
+	elif level == 'medium':
 		print 'YOU HAVE CHOSEN EASY!'
 		return quiz(medium, mediumChoice, count)
-	if level == 'hard':
+	elif level == 'hard':
 		print 'YOU HAVE CHOSEN EASY!'
 		return quiz(hard, hardChoice, count)
 	else:
