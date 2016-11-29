@@ -28,8 +28,8 @@ finish ='YOU HAVE COMPLTED THE QUIZ! CONGRATULATIONS!'
 #used to keep track of how many times user has tried a specific question
 errorCount = []
 
-
-def quiz(level, choices, count): #function asks the questions from user, then passes info to filler function, then receives it back again just like a while loop
+#function asks the questions from user, then passes info to filler function, then receives it back again just like a while loop
+def quiz(level, choices, count): 
 	print level
 	if count < len(missingWords):
 		answer = raw_input('WHAT SHOULD BE IN SPOT ' + missingWords[count] +'?' ' ')
@@ -37,8 +37,8 @@ def quiz(level, choices, count): #function asks the questions from user, then pa
 	else:	
 		print finish
 	
-
-def chooseLevel(level): #function lets user choose a level of easy, medium or hard
+#function lets user choose a level of easy, medium or hard
+def chooseLevel(level): 
 	count = 0
 	if level == 'easy':
 		print 'YOU HAVE CHOSEN EASY!'
@@ -52,7 +52,8 @@ def chooseLevel(level): #function lets user choose a level of easy, medium or ha
 	else:
 		print 'Please enter a valid choice of: easy, medium or hard. Please use all lowercase.'
 
-def error(count): #counts how many times the user has tried to answer the question and got it wrong
+#counts how many times the user has tried to answer the question and got it wrong
+def error(count): 
 	ecount = 0
 	errorCount.append(count)
 	for i in errorCount:
@@ -60,7 +61,8 @@ def error(count): #counts how many times the user has tried to answer the questi
 			ecount +=1
 	return ecount
 
-def filler(answer, count, update, choices): #updates the selected paragraph with the correct answers if correct. Else, prints out incorrect statement and counts down tries
+#updates the selected paragraph with the correct answers if correct. Else, prints out incorrect statement and counts down tries
+def filler(answer, count, update, choices): 
 	finalList = []
 	if answer == choices[count]:
 		print 'CORRECT!'
@@ -82,10 +84,6 @@ def filler(answer, count, update, choices): #updates the selected paragraph with
 		else:
 			print 'You have used up all your chances. Game Over!'
 
-
-
-
-	
 
 userInput = raw_input('What level do you want? easy, medium or hard:' ' ')
 chooseLevel(userInput)
