@@ -12,14 +12,16 @@ def draw_art():
 	brad = turtle.Turtle()
 	brad.shape("turtle")
 	brad.color("green")
-	brad.speed(1)
-	draw_square(brad)
-	#Create the turtle angie- Draw a Circle
-	angie = turtle.Turtle()
-	angie.shape("arrow")
-	angie.color("blue")
-	angie.circle(100)
-	window.exitonclick()
+	brad.speed(2)
+	for i in range(1, 37):
+		draw_square(brad)
+		brad.right(10)
+	##Create the turtle angie- Draw a Circle
+	#angie = turtle.Turtle()
+	#angie.shape("arrow")
+	#angie.color("blue")
+	#angie.circle(100)
+	#window.exitonclick()
 
 #def draw_triangle():
 	#paul = turtle.Turtle()
