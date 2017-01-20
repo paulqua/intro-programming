@@ -1,0 +1,7 @@
+This tournament file is for a Swiss Style Matchings. To run the code and test, follow the steps:
+1. Start up a Vagrant virtual machine
+2. Use psql command to enter into the postgresql editor
+3. Use command \i tournament.sql to import the database schema
+4. Exit psql with the \q command
+5. Run the tournament_test.py file 
+6. All tests should have been completed successfully 
