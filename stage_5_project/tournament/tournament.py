@@ -107,13 +107,19 @@ def swissPairings():
     conn = connect()
     c = conn.cursor()
     c.execute("SELECT * FROM standings;")
-    pairings = c.fetchall()
+    # Take all data from the standings view
+    pairings = c.fetchall()  
+    # Run a for loop through all the data tuples
     for pairs in pairings:
+        # Only take the 0 and 1 data points in each tuple
         group1 = pairs[0], pairs[1]
+        # If the count is an even number then do the if statement
         if (count  % 2 ==0):
             groups = group2 + group1
             pairing_list.append(groups)
+       # If the count is an odd number then do the else statement
         else:
+            # Group2 stores every other tuple so that the players are grouped in correct order
             group2 = group1
         count += 1
     conn.close()
